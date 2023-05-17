@@ -27,7 +27,9 @@ dependencies:
 ## Screenshots
 
 ### Écran d'accueil
-![Accueil](/assets/5.png)
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <img src="/assets/5.png" style="width: 48%;" />
+</div>
 
 ### Ajout d'un utilisateur
 <div style="display: flex; flex-direction: row; justify-content: space-between;">
@@ -36,15 +38,21 @@ dependencies:
 </div>
 
 ### Lecture de l'utilisateur
-![Lecture de l'utilisateur](/assets/8.png)
-![Lecture de l'utilisateur](/assets/2.png)
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <img src="/assets/8.png" style="width: 48%;" />
+    <img src="/assets/2.png" style="width: 48%;" />
+</div>
 
 ### Mise à jour de l'utilisateur
-![Mise à jour de l'utilisateur](/assets/7.png)
-![Mise à jour de l'utilisateur](/assets/3.png)
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <img src="/assets/7.png" style="width: 48%;" />
+    <img src="/assets/3.png" style="width: 48%;" />
+</div>
 
 ### Suppression de l'utilisateur
-![Suppression de l'utilisateur](/assets/4.png)
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <img src="/assets/4.png" style="width: 48%;" />
+</div>
 
 ## Conclusion
 Cette application offre une solution simple et efficace pour gérer les utilisateurs.
