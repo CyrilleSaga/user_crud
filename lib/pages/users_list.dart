@@ -25,14 +25,14 @@ class UsersList extends StatelessWidget {
           child: Container(
             alignment: Alignment.centerLeft,
             padding: const EdgeInsets.all(20),
-            child: const Hero(
+            child: Hero(
               tag: 'title',
               child: Text(
                 'Users',
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w700,
-                ),
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      fontSize: 40,
+                      fontWeight: FontWeight.w700,
+                    ),
               ),
             ),
           ),
@@ -51,7 +51,10 @@ class UsersList extends StatelessWidget {
           itemBuilder: (context, index) {
             User user = controller.users[index];
             return InkWell(
-              onTap: () => Get.to(() => UserDetail(user: user)),
+              onTap: () => Get.to(
+                () => UserDetail(user: user),
+                transition: Transition.rightToLeftWithFade,
+              ),
               child: Container(
                 padding: const EdgeInsets.all(defaultPadding),
                 margin: const EdgeInsets.only(bottom: defaultPadding * .3),
@@ -65,10 +68,13 @@ class UsersList extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Column(
-                        children: const [
-                          Icon(
-                            Icons.person_rounded,
-                            size: 50,
+                        children: [
+                          Hero(
+                            tag: user.id!,
+                            child: const Icon(
+                              Icons.person_rounded,
+                              size: 50,
+                            ),
                           )
                         ],
                       ),
@@ -82,11 +88,11 @@ class UsersList extends StatelessWidget {
                             tag: user.name!,
                             child: Text(
                               "${user.name}",
-                              style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 1.3,
-                              ),
+                              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    letterSpacing: 1.3,
+                                  ),
                             ),
                           ),
                           const SizedBox(height: defaultPadding - 10),
@@ -94,11 +100,11 @@ class UsersList extends StatelessWidget {
                             tag: user.contact!,
                             child: Text(
                               "${user.contact}",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey.shade600,
-                              ),
+                              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.grey.shade600,
+                                  ),
                             ),
                           ),
                           const SizedBox(height: defaultPadding - 6),
@@ -108,6 +114,7 @@ class UsersList extends StatelessWidget {
                               "${user.bio}",
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
+                              style: Theme.of(context).textTheme.titleSmall!,
                             ),
                           ),
                           const SizedBox(height: defaultPadding - 6),
@@ -116,7 +123,10 @@ class UsersList extends StatelessWidget {
                             children: [
                               TextButton(
                                 onPressed: () {
-                                  Get.to(() => UpdateUser(user: user));
+                                  Get.to(
+                                    () => UpdateUser(user: user),
+                                    transition: Transition.rightToLeftWithFade,
+                                  );
                                 },
                                 child: const Text('Edit'),
                               ),
@@ -173,7 +183,10 @@ class UsersList extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
         elevation: 10,
         onPressed: () {
-          Get.to(() => NewUser());
+          Get.to(
+            () => NewUser(),
+            transition: Transition.rightToLeftWithFade,
+          );
         },
         child: const Icon(
           Icons.person_add_alt_rounded,

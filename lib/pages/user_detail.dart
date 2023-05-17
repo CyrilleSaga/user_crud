@@ -39,14 +39,14 @@ class UserDetail extends StatelessWidget {
           child: Container(
             alignment: Alignment.centerLeft,
             padding: const EdgeInsets.all(20),
-            child: const Hero(
+            child: Hero(
               tag: 'title',
               child: Text(
                 'Detail',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700,
-                ),
+                style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w700,
+                    ),
               ),
             ),
           ),
@@ -64,7 +64,7 @@ class UserDetail extends StatelessWidget {
               ListTile(
                 leading: Container(
                   height: double.infinity,
-                  child: const Icon(Icons.person_rounded),
+                  child: Hero(tag: user.id!, child: const Icon(Icons.person_rounded)),
                 ),
                 title: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -73,7 +73,10 @@ class UserDetail extends StatelessWidget {
                     Expanded(
                       child: Hero(
                         tag: user.name!,
-                        child: Text(user.name!),
+                        child: Text(
+                          user.name!,
+                          style: Theme.of(context).textTheme.titleMedium!,
+                        ),
                       ),
                     ),
                   ],
@@ -92,7 +95,7 @@ class UserDetail extends StatelessWidget {
                     Expanded(
                       child: Hero(
                         tag: user.contact!,
-                        child: Text(user.contact!),
+                        child: Text(user.contact!, style: Theme.of(context).textTheme.titleSmall!),
                       ),
                     ),
                   ],
@@ -111,7 +114,7 @@ class UserDetail extends StatelessWidget {
                     Expanded(
                       child: Hero(
                         tag: user.bio!,
-                        child: Text(user.bio!),
+                        child: Text(user.bio!, style: Theme.of(context).textTheme.titleSmall!),
                       ),
                     ),
                   ],
