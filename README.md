@@ -30,8 +30,10 @@ dependencies:
 ![Accueil](/assets/5.png)
 
 ### Ajout d'un utilisateur
-![Ajout d'un utilisateur](/assets/6.png)
-![Ajout d'un utilisateur](/assets/1.png)
+<div style="display: flex;">
+    <img src="/assets/6.png" style="width: 50%;" />
+    <img src="/assets/1.png" style="width: 50%;" />
+</div>
 
 ### Lecture de l'utilisateur
 ![Lecture de l'utilisateur](/assets/8.png)
