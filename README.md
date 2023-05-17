@@ -1,7 +1,7 @@
 # Application de gestion d'utilisateurs
 
 ## Introduction
-Cette application est conçue pour permettre apprenant de flutter de comprendre comment fonctionne les base de données en local.
+Cette application est conçue pour permettre au apprenant de flutter de comprendre comment fonctionne les base de données en local.
 
 ## Fonctionnalités
 - Ajouter un utilisateur
