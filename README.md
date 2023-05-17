@@ -1,16 +1,48 @@
-# users
+# Application de gestion d'utilisateurs
 
-A new Flutter project.
+## Introduction
+Cette application est conçue pour permettre apprenant de flutter de comprendre comment fonctionne les base de données en local.
 
-## Getting Started
+## Fonctionnalités
+- Ajouter un utilisateur
+- Lire les informations d'un utilisateur
+- Mettre à jour les informations d'un utilisateur
+- Supprimer un utilisateur 
 
-This project is a starting point for a Flutter application.
+## Dépendances
+Les dépendances suivantes ont été utilisées pour développer cette application :
 
-A few resources to get you started if this is your first Flutter project:
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.2.8+3
+  path_provider: ^2.0.15
+  get: ^4.6.5
+```
+- **sqflite** est utilisé pour la gestion de la base de données SQLite.
+- **path_provider** est utilisé pour accéder aux emplacements des fichiers locaux.
+- **get** est utilisé pour la gestion de l'état, pour la navigation entre les pages et pour afficher des messages d'informations.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Écran d'accueil
+![Accueil](/assets/5.png)
+
+### Ajout d'un utilisateur
+![Ajout d'un utilisateur](/assets/6.png)
+![Ajout d'un utilisateur](/assets/1.png)
+
+### Lecture de l'utilisateur
+![Lecture de l'utilisateur](/assets/8.png)
+![Lecture de l'utilisateur](/assets/2.png)
+
+### Mise à jour de l'utilisateur
+![Mise à jour de l'utilisateur](/assets/7.png)
+![Mise à jour de l'utilisateur](/assets/3.png)
+
+### Suppression de l'utilisateur
+![Suppression de l'utilisateur](/assets/4.png)
+
+## Conclusion
+Cette application offre une solution simple et efficace pour gérer les utilisateurs.
