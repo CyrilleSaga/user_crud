@@ -30,9 +30,9 @@ dependencies:
 ![Accueil](/assets/5.png)
 
 ### Ajout d'un utilisateur
-<div style="display: flex;">
-    <img src="/assets/6.png" style="width: 50%;" />
-    <img src="/assets/1.png" style="width: 50%;" />
+<div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <img src="/assets/6.png" style="width: 48%;" />
+    <img src="/assets/1.png" style="width: 48%;" />
 </div>
 
 ### Lecture de l'utilisateur
