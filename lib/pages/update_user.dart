@@ -5,8 +5,17 @@ import '../constants.dart';
 import '../controllers/user_controller.dart';
 import '../model/user.dart';
 
-class NewUser extends StatelessWidget {
-  NewUser({super.key});
+class UpdateUser extends StatelessWidget {
+  User user;
+
+  UpdateUser({
+    super.key,
+    required this.user,
+  }) {
+    _nameController.text = user.name!;
+    _contactController.text = user.contact!;
+    _bioController.text = user.bio!;
+  }
 
   final _formKey = GlobalKey<FormState>();
   final _unfocusNode = FocusNode();
@@ -51,7 +60,7 @@ class NewUser extends StatelessWidget {
               alignment: Alignment.centerLeft,
               padding: const EdgeInsets.all(20),
               child: const Text(
-                'Create new user',
+                'Update user',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w700,
@@ -264,19 +273,19 @@ class NewUser extends StatelessWidget {
                         Get.put(HandleUserController());
                         if (_formKey.currentState!.validate()) {
                           loading.value = true;
-                          User newUser = User(
+                          User updatedUser = user.copyWith(
                             name: _nameController.text,
                             contact: _contactController.text,
                             bio: _bioController.text,
                           );
-                          await Get.find<HandleUserController>().createUser(newUser);
+                          await Get.find<HandleUserController>().updateUser(updatedUser);
                           await Get.find<UserListController>().getAllUsers();
                           _nameController.text = '';
                           _contactController.text = '';
                           _bioController.text = '';
                           loading.value = false;
                           Get.back();
-                          Get.snackbar('Success', 'the user has been created successfully.');
+                          Get.snackbar('Success', 'the user has been updated successfully.');
                         }
                       },
                       icon: Obx(() {

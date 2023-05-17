@@ -25,7 +25,7 @@ class UserService {
     return (await _repository.updateData(user.toMap()))!;
   }
 
-  Future<int> deleteUser(userId) async {
+  Future<int> deleteUser(int userId) async {
     return (await _repository.deleteDataById(userId))!;
   }
 }
